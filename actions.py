@@ -44,7 +44,8 @@ from rasa_core_sdk import ActionExecutionRejection
 from rasa_core_sdk import Tracker
 from rasa_core_sdk.executor import CollectingDispatcher
 from rasa_core_sdk.forms import FormAction, REQUESTED_SLOT
-
+from table import *
+from mail import *
 
 # class ActionCheckRestaurants(Action):
 #     def name(self):
@@ -90,5 +91,9 @@ class Quoteform(FormAction):
         proj_application = tracker.get_slot("application")
         proj_budget = tracker.get_slot("money")
         contact = tracker.get_slot("contact")
-        print(proj_name)
+        senderemailadd = "harsh.pv07@gmail.com"
+        receiveremailaddr = "harsh.pv2017@vitstudent.ac.in"
+        senderemailpass = "harsh@123"
+        DB(proj_name,prog_use,proj_idea,proj_application,proj_budget,contact)
+        maill(proj_name,prog_use,proj_idea,proj_application,proj_budget,contact,senderemailadd,receiveremailaddr,senderemailpass)
         return []

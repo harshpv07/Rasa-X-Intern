@@ -14,21 +14,27 @@ actions:
 - utter_happy
 - utter_joke
 - utter_name
-- utter_thanks
 - utter_send
-
-
+- utter_thanks
+- utter_application
+- utter_budget
+- utter_contact
+- utter_idea
+- utter_program_use
+- utter_project_name
 entities:
-- name
-- project_name
-- program_use
-- idea
 - application
-- money
 - contact
-
+- idea
+- money
+- name
+- program_use
+- project_name
+forms:
+- quote_form
 intents:
 - affirm
+- consultance
 - deny
 - goodbye
 - greet
@@ -36,33 +42,34 @@ intents:
 - mood_great
 - mood_unhappy
 - name
-- restaurant
 - requestquote
-- consultance
-
+- restaurant
 slots:
+  application:
+    auto_fill: false
+    type: unfeaturized
+  contact:
+    auto_fill: false
+    type: unfeaturized
+  idea:
+    auto_fill: false
+    type: unfeaturized
+  money:
+    auto_fill: false
+    type: unfeaturized
   name:
     type: text
-  project_name:
-    type: unfeaturized
-    auto_fill: false
   program_use:
-    type: unfeaturized
     auto_fill: false
-  idea:
     type: unfeaturized
+  project_name:
     auto_fill: false
-  application:
     type: unfeaturized
-    auto_fill: false
-  money:
-    type: unfeaturized
-    auto_fill: false
-  contact:
-    type: unfeaturized
-    auto_fill: false  
-
 templates:
+  utter_application:
+  - text: Where is your idea used?
+  utter_budget:
+  - text: What is the budget for this project?
   utter_build:
   - text: We can build any sort of IT solutions like Web or Product Development
   utter_cheer_up:
@@ -71,6 +78,8 @@ templates:
   utter_consultance:
   - text: We are experts in consultance. We can get you in touch with our experts
       to develop your idea.
+  utter_contact:
+  - text: Enter your contact Number so that our team can get in contact with you
   utter_did_that_help:
   - text: Did that help you?
   utter_domain:
@@ -86,18 +95,17 @@ templates:
   - text: Hi {name} ! How are you ?
   utter_happy:
   - text: Great carry on!
+  utter_idea:
+  - text: What is the idea of your project?
   utter_joke:
   - text: why is 9 afraid of 7 cuz 789
   utter_name:
   - text: Tell me your name?
-  utter_thanks:
-  - text: Thank you
+  utter_program_use:
+  - text: What technology do you want us to use ?
+  utter_project_name:
+  - text: What is the proposed name of your project ?
   utter_send:
   - text: I will send these details and get back to you shortly.
-
-
-forms:
-  - quote_form
-
-policies:
-  - name: "FormPolicy"
+  utter_thanks:
+  - text: Thank you

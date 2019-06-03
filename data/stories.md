@@ -96,40 +96,6 @@
 * affirm
     - utter_goodbye
 
-## New Story
-
-* greet
-    - utter_name
-* name
-    - utter_greet
-
-## New Story
-
-* greet
-    - utter_name
-* name{"name":"raj"}
-    - utter_greet
-    - utter_goodbye
-* goodbye
-
-## New Story
-
-* greet
-    - utter_name
-* name{"name":"robert"}
-    - utter_greet
-* mood_great
-    - utter_goodbye
-
-## New Story
-
-* greet
-    - utter_name
-* name{"name":"rajesh"}
-    - utter_greet
-* mood_great
-    - utter_goodbye
-
 ## Quote path
 * greet
     - utter_name
@@ -195,3 +161,48 @@
     - utter_send
 * goodbye
     - utter_goodbye
+
+## New Story
+
+* greet
+    - utter_name
+* name{"name":"harsh"}
+    - utter_greet
+* mood_great
+    - utter_domain
+* consultance
+    - utter_consultance
+    - quote_form
+    - slot{"requested_slot":"project_name"}
+    - utter_project_name
+* name
+    - quote_form
+    - slot{"project_name":"mars"}
+    - slot{"requested_slot":"program_use"}
+    - utter_program_use
+* name
+    - quote_form
+    - slot{"program_use":"cpp"}
+    - slot{"requested_slot":"idea"}
+    - utter_idea
+* name
+    - quote_form
+    - slot{"idea":"create a rover"}
+    - slot{"requested_slot":"application"}
+    - utter_application
+* name
+    - quote_form
+    - slot{"application":"for mobility"}
+    - slot{"requested_slot":"money"}
+    - utter_budget
+* name
+    - quote_form
+    - slot{"money":"2000"}
+    - slot{"requested_slot":"contact"}
+    - utter_contact
+* name
+    - quote_form
+    - slot{"contact":"9884923231"}
+    - slot{"requested_slot":null}
+    - utter_goodbye
+* goodbye
