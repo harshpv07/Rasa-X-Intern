@@ -10,7 +10,7 @@
 - i need advice
 - i need some advice
 - i need guidance
-
+- consultance
 ## intent:deny
 - no
 - never
@@ -71,6 +71,13 @@
 - i am sad
 
 ## intent:name
+- [harsh](name)
+- [raj](name)
+- [kumar](name)
+- [lal](name)
+- [ganesh](name)
+- [sophia](name)
+- [Lucy](name)
 - My name is [harsh](name)
 - My name is [raj](name)
 - My name is [Juste](name)

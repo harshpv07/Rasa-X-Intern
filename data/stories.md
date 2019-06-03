@@ -142,3 +142,56 @@
     - utter_send
 * affirm
     - utter_goodbye
+
+## New Story
+
+* greet
+    - utter_name
+* name{"name":"raj"}
+    - utter_greet
+* mood_great
+* requestquote
+    - form{"name":"quote_form"}
+    - form{"name":null}
+    - utter_send
+* goodbye
+    - utter_goodbye
+
+## New Story
+
+* greet
+    - utter_name
+* name{"name":"harsh"}
+    - utter_greet
+* mood_great
+* requestquote
+    - form{"name":"quote_form"}
+    - form{"name":null}
+
+## New Story
+
+* greet
+    - utter_name
+* name{"name":"harsh"}
+    - utter_greet
+* mood_great
+* requestquote
+    - quote_form
+    - utter_send
+* goodbye
+    - utter_goodbye
+
+## New Story
+
+* greet
+    - utter_name
+* name
+    - utter_greet
+* mood_great
+    - utter_domain
+* consultance
+    - utter_consultance
+    - quote_form
+    - utter_send
+* goodbye
+    - utter_goodbye

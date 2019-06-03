@@ -18,7 +18,6 @@ actions:
 - utter_send
 
 
-
 entities:
 - name
 - project_name
@@ -39,6 +38,7 @@ intents:
 - name
 - restaurant
 - requestquote
+- consultance
 
 slots:
   name:
@@ -46,7 +46,7 @@ slots:
   project_name:
     type: unfeaturized
     auto_fill: false
-  project_use:
+  program_use:
     type: unfeaturized
     auto_fill: false
   idea:
@@ -98,3 +98,6 @@ templates:
 
 forms:
   - quote_form
+
+policies:
+  - name: "FormPolicy"
