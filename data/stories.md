@@ -206,3 +206,46 @@
     - slot{"requested_slot":null}
     - utter_goodbye
 * goodbye
+
+## New Story
+
+* greet
+    - utter_name
+* name{"name":"harsh"}
+    - utter_greet
+* mood_great
+    - utter_domain
+* consultance
+    - utter_consultance
+    - quote_form
+    - slot{"requested_slot":"project_name"}
+    - utter_project_name
+* name
+    - quote_form
+    - slot{"project_name":"car electronics"}
+    - slot{"requested_slot":"program_use"}
+    - utter_program_use
+* name
+    - quote_form
+    - slot{"program_use":"python"}
+    - slot{"requested_slot":"idea"}
+    - utter_idea
+* name
+    - quote_form
+    - slot{"idea":"to create a VR environment"}
+    - slot{"requested_slot":"application"}
+    - utter_application
+* name
+    - quote_form
+    - slot{"application":"VR"}
+    - slot{"requested_slot":"money"}
+    - utter_budget
+* name
+    - quote_form
+    - slot{"money":"2500"}
+    - slot{"requested_slot":"contact"}
+    - utter_contact
+* name
+    - utter_send
+* goodbye
+    - utter_goodbye
